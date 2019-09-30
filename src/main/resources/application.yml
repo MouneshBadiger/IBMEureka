@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: eureka-service
+server:
+      port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    enable-self-preservation: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false    
+ribbon:
+    ConnectTimeout: 30000
+    ReadTimeout: 60000
